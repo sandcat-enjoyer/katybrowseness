@@ -1,4 +1,6 @@
-# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Chromium
+# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Katy browseness
+
+New browser for thing . Wow. What an fruttiger aero Compatible with wista I think not Sorry
 
 Chromium is an open-source browser project that aims to build a safer, faster,
 and more stable way for all users to experience the web.
