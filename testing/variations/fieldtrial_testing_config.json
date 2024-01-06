@@ -2126,28 +2126,6 @@
             ]
         }
     ],
-    "AvoidUnnecessaryBeforeUnloadCheckSync": [
-        {
-            "platforms": [
-                "android",
-                "android_weblayer",
-                "chromeos",
-                "chromeos_lacros",
-                "fuchsia",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "AvoidUnnecessaryBeforeUnloadCheckSync"
-                    ]
-                }
-            ]
-        }
-    ],
     "BFCachePerformanceManagerPolicy": [
         {
             "platforms": [
@@ -6781,6 +6759,27 @@
             ]
         }
     ],
+    "ExperimentalFeaturesVisibilityDesktop": [
+        {
+            "platforms": [
+                "chromeos",
+                "chromeos_lacros",
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "ComposeSettingsVisibility",
+                        "TabOrganizationSettingsVisibility",
+                        "WallpaperSearchSettingsVisibility"
+                    ]
+                }
+            ]
+        }
+    ],
     "ExploreSitesDense": [
         {
             "platforms": [
@@ -10926,21 +10925,6 @@
             ]
         }
     ],
-    "MostVisitedTilesHorizontalRenderGroup": [
-        {
-            "platforms": [
-                "android"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "OmniboxMostVisitedTilesHorizontalRenderGroup"
-                    ]
-                }
-            ]
-        }
-    ],
     "MouseDragOnCancelledMouseMove": [
         {
             "platforms": [
@@ -11364,37 +11348,27 @@
             ],
             "experiments": [
                 {
-                    "name": "Redesigned_Quests_MR_ML_20230929",
+                    "name": "Redesigned_Quests_WithHaTS_20240105",
                     "params": {
                         "NtpHistoryClustersModuleCategoriesBoostlistParam": "/m/testparsinglogicboost,/m/testparsinglogicboost-2",
+                        "NtpModuleIgnoredHaTSDelayTimeParam": "12",
+                        "NtpModulesInteractionBasedSurveyEligibleIdsParam": "{\"disable\":{\"history_clusters\":\"abc\"},\"dismiss\":{\"history_clusters\":\"abc\"},\"ignore\":{\"history_clusters\":\"abc\"},\"use\":{\"history_clusters\":\"abc\"}}",
                         "NtpModulesOrderParam": "drive",
-                        "NtpRealboxWidthBehaviorParam": "wide"
+                        "NtpRealboxWidthBehaviorParam": "wide",
+                        "probability": "1.0"
                     },
                     "enable_features": [
+                        "HappinessTrackingSurveysForDesktopNtpModules",
                         "NtpChromeCartInHistoryClusterModule",
                         "NtpDriveModuleShowSixFiles",
                         "NtpHistoryClustersModule",
                         "NtpHistoryClustersModuleCategories",
+                        "NtpHistoryClustersModuleSuggestionChipHeader",
                         "NtpHistoryClustersModuleUseModelRanking",
                         "NtpModulesOrder",
                         "NtpModulesRedesigned",
                         "NtpRealboxIsTall",
                         "NtpRealboxWidthBehavior"
-                    ]
-                },
-                {
-                    "name": "Quests_Cart_ML_20230913",
-                    "params": {
-                        "NtpHistoryClustersModuleCategoriesBoostlistParam": "/m/testparsinglogicboost,/m/testparsinglogicboost-2"
-                    },
-                    "enable_features": [
-                        "NtpChromeCartInHistoryClusterModule",
-                        "NtpHistoryClustersModule",
-                        "NtpHistoryClustersModuleCategories",
-                        "NtpHistoryClustersModuleUseModelRanking",
-                        "NtpModulesHeaderIcon",
-                        "NtpWideModules",
-                        "SyncPollImmediatelyOnEveryStartup"
                     ]
                 }
             ]
@@ -12561,23 +12535,6 @@
                     "name": "Enabled",
                     "enable_features": [
                         "OverrideThrottledFrameRateParams"
-                    ]
-                }
-            ]
-        }
-    ],
-    "OverscrollHistoryNavigationSetting": [
-        {
-            "platforms": [
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "OverscrollHistoryNavigationSetting"
                     ]
                 }
             ]
@@ -17960,6 +17917,29 @@
                     },
                     "enable_features": [
                         "TabHoverCardImages"
+                    ]
+                }
+            ]
+        }
+    ],
+    "TabOrganization": [
+        {
+            "platforms": [
+                "chromeos",
+                "chromeos_lacros",
+                "fuchsia",
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "params": {
+                        "trigger_period": "30m"
+                    },
+                    "enable_features": [
+                        "TabOrganization"
                     ]
                 }
             ]
